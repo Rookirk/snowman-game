@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     CharacterController character;
 
+    public float MoveSpeed;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -17,6 +19,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 InputDirection = value.Get<Vector2>();
         Vector3 MoveDirection = new Vector3(InputDirection.x, 0, InputDirection.y);
-        character.SimpleMove(MoveDirection);
+        character.SimpleMove(MoveSpeed * MoveDirection);
     }
 }
