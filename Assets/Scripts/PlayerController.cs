@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class PlayerController : MonoBehaviour
         character = GetComponent<CharacterController>();
     }
 
-    void OnMovement(Vector2 direction)
+    void OnMovement(InputValue value)
     {
-        character.Move(direction);
+        Vector2 InputDirection = value.Get<Vector2>();
+        Vector3 MoveDirection = new Vector3(InputDirection.x, 0, InputDirection.y);
+        character.SimpleMove(MoveDirection);
     }
 }
