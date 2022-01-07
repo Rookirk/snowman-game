@@ -5,14 +5,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     CharacterController character;
 
     public float MoveSpeed;
-    public int itemsCollected = 0;
+    public int itemsCollected = 3;
 
     // Start is called before the first frame update
     void Awake()
     {
+        instance = this;
         character = GetComponent<CharacterController>();
     }
 
@@ -32,8 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             // After Destroy, the item is collected. 
             Destroy(collision.gameObject);
-            itemsCollected++;
+            itemManager.instance.AddItem();
         }
-
     }
 }
