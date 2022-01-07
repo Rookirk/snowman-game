@@ -6,16 +6,20 @@ public class itemManager : MonoBehaviour
     public static itemManager instance; // reference to this instance
     public Text itemNumText;            // reference to text in the UI
 
-    int _itemCount = 0;
-    int _itemMax = 10;
+    private int _itemCount = 0;
+    private int _itemMax = 10;
 
     private void Awake()
     {
         instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
+    {
+        SetText();
+    }
+
+    private void SetText()
     {
         // Update text
         itemNumText.text = "Items Collected: " + _itemCount.ToString() + "/" + _itemMax.ToString();
@@ -25,5 +29,6 @@ public class itemManager : MonoBehaviour
     public void AddItem()
     {
         _itemCount++;
+        SetText();
     }
 }
