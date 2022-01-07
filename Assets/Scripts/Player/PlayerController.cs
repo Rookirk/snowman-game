@@ -12,18 +12,27 @@ public class PlayerController : MonoBehaviour
     public float MoveSpeed;
     public int itemsCollected = 3;
 
-    // Start is called before the first frame update
+    private Vector3 moveVector;
+
+    // Awake is called before the first frame update
+    // Awake is used for local initializations (on the same gameObject)
     void Awake()
     {
         instance = this;
         character = GetComponent<CharacterController>();
     }
 
+    private void Update()
+    {
+        character.SimpleMove(moveVector);
+    }
+
     void OnMovement(InputValue value)
     {
         Vector2 InputDirection = value.Get<Vector2>();
         Vector3 MoveDirection = new Vector3(InputDirection.x, 0, InputDirection.y);
-        character.SimpleMove(MoveSpeed * MoveDirection);
+        
+        moveVector = MoveSpeed * MoveDirection;
     }
 
     // This function is used when the Player collider hits another collider.
