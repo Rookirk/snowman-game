@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Item
+  - Present
+  - Interactable
   layers:
   - Default
   - TransparentFX
