@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PresentManager : MonoBehaviour
+public class itemManager : MonoBehaviour
 {
-    public static PresentManager instance; // reference to this instance
+    public static itemManager instance; // reference to this instance
     public Text itemNumText;            // reference to text in the UI
 
     private int _itemCount = 0;
@@ -22,7 +22,7 @@ public class PresentManager : MonoBehaviour
     private void SetText()
     {
         // Update text
-        itemNumText.text = "Presents Collected: " + _itemCount.ToString() + "/" + _itemMax.ToString();
+        itemNumText.text = "Items Collected: " + _itemCount.ToString() + "/" + _itemMax.ToString();
     }
 
     // Add item to total items collected
