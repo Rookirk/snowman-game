@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class TestInteractable : Interactable
+public class SlidingInteractable : Interactable
 {
 	public override void OnInteract()
 	{

@@ -7,14 +7,28 @@ using UnityEngine;
 // Will need to track that?
 public abstract class Interactable : MonoBehaviour
 {
+	public Canvas selectedText;
+
+	protected virtual void Start()
+	{
+		selectedText.enabled = false;
+	}
+
 	/// <summary>
     /// Triggers behaviour to indicate this interactable is selectable
     /// </summary>
-	public abstract void Select();
+	public virtual void Select()
+	{
+		selectedText.enabled = true;
+	}
+
 	/// <summary>
     /// Triggers behaviour to remove the select behaviour
     /// </summary>
-	public abstract void Deselect();
+	public virtual void Deselect()
+	{
+		selectedText.enabled = false;
+	}
 
 	/// <summary>
     /// Triggers desired behaviour when player interacts with this object
