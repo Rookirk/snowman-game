@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
     public Animator animator;
+    private Transform animTransform;
 
     public void Move( Vector3 moveVector )
     {
@@ -12,8 +13,8 @@ public class PlayerAnimator : MonoBehaviour
 
         if( moveVector != Vector3.zero )
         {
-            animator.gameObject.transform.LookAt( animator.gameObject.transform.position + moveVector);
-            Debug.Log(animator.gameObject.transform.rotation);
+            Vector3 actualDirection = SnowmanMath.VectorApproach( animator.transform.forward, moveVector, 0.15f, Time.deltaTime );
+            animator.transform.LookAt( animator.transform.position + actualDirection );
         }
     }
 }

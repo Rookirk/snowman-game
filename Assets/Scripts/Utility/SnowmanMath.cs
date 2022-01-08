@@ -14,6 +14,15 @@ public static class SnowmanMath
         return Mathf.Lerp(a, b, 1 - Mathf.Pow(factor, dt));
     }
 
+    public static Vector3 VectorApproach( Vector3 a, Vector3 b, float factor, float dt )
+    {
+        float x = Approach( a.x, b.x, factor, dt );
+        float y = Approach( a.y, b.y, factor, dt );
+        float z = Approach( a.z, b.z, factor, dt );
+
+        return new Vector3( x, y, z );
+    }
+
     public static float PythagoreanDistance(float a, float b)
     {
         return Mathf.Sqrt( a*a + b*b );
