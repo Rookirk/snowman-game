@@ -5,7 +5,7 @@ using TMPro;
 
 public abstract class Interactable : MonoBehaviour
 {
-	public TextMeshProUGUI selectedText;
+	public Canvas selectedText;
 
 	protected virtual void Start()
 	{
