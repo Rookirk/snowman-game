@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Scripts/Presents/Present.cs.meta
-guid: 29262ff5ea2966e42b6502a77c357161
-=======
-guid: c60815fa84f7cfb458041bd8c89b5b1e
->>>>>>> main:Assets/Scripts/MainMenu.cs.meta
+guid: d81926c700cd596438103d6b6b4d4ae9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
