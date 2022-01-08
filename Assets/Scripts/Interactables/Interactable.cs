@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-
-// TODO: Theoretically can be triggered multiple times.
-// Will need to track that?
 public abstract class Interactable : MonoBehaviour
 {
-	public Canvas selectedText;
+	public TextMeshProUGUI selectedText;
 
 	protected virtual void Start()
 	{
@@ -34,4 +32,12 @@ public abstract class Interactable : MonoBehaviour
     /// Triggers desired behaviour when player interacts with this object
     /// </summary>
 	public abstract void OnInteract();
+
+	public virtual void DisableCollider()
+	{
+		Deselect();
+		GetComponent<Collider>().enabled = false;
+
+		PlayerController.instance.RemoveFromInteractableList( this );
+	}
 }

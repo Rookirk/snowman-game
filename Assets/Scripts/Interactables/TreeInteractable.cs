@@ -17,8 +17,7 @@ public class TreeInteractable : Interactable
 	{
 		animator.SetTrigger("Shake");
 
-		Deselect();
-		GetComponent<Collider>().enabled = false;
+		DisableCollider();
 
 		StartCoroutine( ActivatePresent() );
 	}

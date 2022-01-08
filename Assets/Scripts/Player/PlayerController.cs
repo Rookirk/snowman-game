@@ -80,14 +80,7 @@ public class PlayerController : MonoBehaviour
         if( collision.tag == "Interactable" )
         {
             Interactable interactable = collision.GetComponent<Interactable>();
-            if( nearbyInteractableList.Contains( interactable ) )
-            {
-                nearbyInteractableList.Remove( interactable );
-            }
-            else
-            {
-                Debug.LogWarning("Tried to remove interactable but none found!");
-            }
+            RemoveFromInteractableList( interactable );
         }
     }
 
@@ -117,6 +110,18 @@ public class PlayerController : MonoBehaviour
         {
             previousInteractable?.Deselect();
             previousInteractable = closestInteractable;
+        }
+    }
+
+    public void RemoveFromInteractableList( Interactable interactable )
+    {
+        if( nearbyInteractableList.Contains( interactable ) )
+        {
+            nearbyInteractableList.Remove( interactable );
+        }
+        else
+        {
+            Debug.LogWarning("Tried to remove interactable but none found!");
         }
     }
 }
