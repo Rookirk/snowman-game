@@ -22,7 +22,7 @@ public class PresentManager : MonoBehaviour
     private void SetText()
     {
         // Update text
-        itemNumText.text = "Items Collected: " + _itemCount.ToString() + "/" + _itemMax.ToString();
+        itemNumText.text = "Presents Collected: " + _itemCount.ToString() + "/" + _itemMax.ToString();
     }
 
     // Add item to total items collected
