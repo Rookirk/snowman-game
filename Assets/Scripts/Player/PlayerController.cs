@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
 
-    CharacterController character;
+    private CharacterController character;
+    private PlayerAnimator animator;
 
     public float MoveSpeed;
     public int itemsCollected = 3;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         instance = this;
         character = GetComponent<CharacterController>();
+        animator = GetComponent<PlayerAnimator>();
 
         nearbyInteractableList = new List<Interactable>();
     }
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         // Moves the player based on how much was specified in OnMovement()
         character.SimpleMove(moveVector);
+        animator.Move( moveVector );
 
         FindClosestInteractable();
     }
