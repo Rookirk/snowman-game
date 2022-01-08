@@ -74,7 +74,7 @@ public class Present : MonoBehaviour
         source.Play();
 
         // Add item to present manager
-        PresentManager.instance.AddItem();
+        PresentManager.instance.AddPresent();
 
         // Destroy this game object
         Destroy(gameObject, source.clip.length);
