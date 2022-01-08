@@ -9,17 +9,19 @@ public class Present : MonoBehaviour
     private AudioSource source;
 
     // Vars for translation and rotation
-    float floatMagnitude = 0.5f;
-    float floatSpeed = 0.001f;
-    float rotationSpeed = 0.05f;
-    float n = 0.0f;
-    bool collected = false;
+    public float floatMagnitude = 0.5f;
+    public float floatSpeed = 1f;
+    public float rotationSpeed = 1f;
+    public float liftSpeed = 1f;
+
+    private float floatCount = 0.0f;
+    private bool collected = false;
 
     // Original transformation position
-    Vector3 originalPos;
+    private Vector3 originalPos;
 
     // Float offset
-    Vector3 floatOffset = new Vector3(0.0f, 0.0f, 0.0f);
+    private Vector3 floatOffset = new Vector3(0.0f, 0.0f, 0.0f);
 
     // Set original position of object
     void Start()
@@ -34,17 +36,17 @@ public class Present : MonoBehaviour
         if (collected == false)
         {
             // Vertical float
-            n += floatSpeed;
-            floatOffset.y = Mathf.Sin(n) * floatMagnitude;
+            floatCount += floatSpeed * Time.deltaTime;
+            floatOffset.y = Mathf.Sin(floatCount) * floatMagnitude;
             presentModel.position = floatOffset + originalPos;
 
             // Rotation
-            presentModel.Rotate(0.0f, rotationSpeed, 0.0f);
+            presentModel.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
         }
         else
         {
-            presentModel.Translate(0.0f, 0.03f, 0.0f);
-            presentModel.Rotate(0.0f, rotationSpeed * 4, 0.0f);
+            presentModel.Translate(0.0f, liftSpeed * Time.deltaTime, 0.0f);
+            presentModel.Rotate(0.0f, rotationSpeed * 10 * Time.deltaTime, 0.0f);
         }
         
     }

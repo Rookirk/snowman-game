@@ -151,6 +151,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   presentModel: {fileID: 9135980343021535842}
   pickupSound: {fileID: 8300000, guid: dbaef2ca138a08f4c8f0713e3636611f, type: 3}
+  floatMagnitude: 0.5
+  floatSpeed: 1
+  rotationSpeed: 8
+  liftSpeed: 8
 --- !u!82 &9034344713024235283
 AudioSource:
   m_ObjectHideFlags: 0
