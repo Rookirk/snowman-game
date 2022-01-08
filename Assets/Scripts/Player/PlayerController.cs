@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         {
             // After Destroy, the item is collected. 
             Destroy(collision.gameObject);
-            PresentManager.instance.AddItem();
+            PresentManager.instance.AddPresent();
         }
         else if( collision.tag == "Interactable" )
         {
