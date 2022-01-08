@@ -20,17 +20,9 @@ public class Present : MonoBehaviour
     private bool collected = false;
     private bool shouldAnimate = true;
 
-    // Original transformation position
-    private Vector3 originalPos;
-
-    // Float offset
-    private Vector3 floatOffset = new Vector3(0.0f, 0.0f, 0.0f);
-
     // Set original position of object
     void Start()
     {
-        // TODO: Redo this. Just have an offset gameObject determine the original position
-        originalPos = presentModel.position;
         source = GetComponent<AudioSource>();
         detectionCollider = GetComponent<Collider>();
 
@@ -49,9 +41,12 @@ public class Present : MonoBehaviour
             if (collected == false)
             {
                 // Vertical float
+                // As a note to Bryson, I removed floatOffset because it hardcoded the x and z coordinates to 0,0
+                Vector3 newPosition = presentModel.localPosition;
+
                 floatCount += floatSpeed * Time.deltaTime;
-                floatOffset.y = Mathf.Sin(floatCount) * floatMagnitude;
-                presentModel.position = floatOffset + originalPos;
+                newPosition.y = ( -Mathf.Cos(floatCount) + 1 ) * floatMagnitude;
+                presentModel.localPosition = newPosition;
 
                 // Rotation
                 presentModel.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
@@ -68,7 +63,6 @@ public class Present : MonoBehaviour
     {
         detectionCollider.enabled = true;
         shouldAnimate = true;
-        originalPos = presentModel.position;
     }
 
     public void Collected()

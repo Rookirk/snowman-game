@@ -136,7 +136,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &2557149321223097891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presentModel: {fileID: 9135980343021535842}
-  pickupSound: {fileID: 8300000, guid: dbaef2ca138a08f4c8f0713e3636611f, type: 3}
+  activateOnStart: 1
   floatMagnitude: 0.5
   floatSpeed: 1
   rotationSpeed: 8
@@ -284,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 630852e5fcff4eb4db40e16d0b9760dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 630852e5fcff4eb4db40e16d0b9760dc, type: 3}
       propertyPath: m_LocalPosition.z

@@ -17,6 +17,7 @@ public class TreeInteractable : Interactable
 	{
 		animator.SetTrigger("Shake");
 
+		Deselect();
 		GetComponent<Collider>().enabled = false;
 
 		StartCoroutine( ActivatePresent() );
@@ -24,7 +25,7 @@ public class TreeInteractable : Interactable
 
     private IEnumerator ActivatePresent()
     {
-        yield return new WaitForSeconds( 2.5f );
+        yield return new WaitForSeconds( 2f );
 
 		present.Activate();
     }
