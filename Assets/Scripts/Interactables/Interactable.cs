@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-
-// TODO: Theoretically can be triggered multiple times.
-// Will need to track that?
 public abstract class Interactable : MonoBehaviour
 {
-	public Canvas selectedText;
+	public Canvas selectedCanvas;
 
 	protected virtual void Start()
 	{
-		selectedText.enabled = false;
+		selectedCanvas.enabled = false;
 	}
 
 	/// <summary>
@@ -19,7 +17,7 @@ public abstract class Interactable : MonoBehaviour
     /// </summary>
 	public virtual void Select()
 	{
-		selectedText.enabled = true;
+		selectedCanvas.enabled = true;
 	}
 
 	/// <summary>
@@ -27,11 +25,19 @@ public abstract class Interactable : MonoBehaviour
     /// </summary>
 	public virtual void Deselect()
 	{
-		selectedText.enabled = false;
+		selectedCanvas.enabled = false;
 	}
 
 	/// <summary>
     /// Triggers desired behaviour when player interacts with this object
     /// </summary>
 	public abstract void OnInteract();
+
+	public virtual void DisableCollider()
+	{
+		Deselect();
+		GetComponent<Collider>().enabled = false;
+
+		PlayerController.instance.RemoveFromInteractableList( this );
+	}
 }

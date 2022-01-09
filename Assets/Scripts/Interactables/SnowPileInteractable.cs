@@ -3,19 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class TreeInteractable : Interactable
+public class SnowPileInteractable : TransformInteractable
 {
 	public Present present;
-	private Animator animator;
-
-	private void Awake()
-	{
-		animator = GetComponent<Animator>();
-	}
 
 	public override void OnInteract()
 	{
-		animator.SetTrigger("Shake");
+		base.OnInteract();
 
 		DisableCollider();
 
@@ -24,7 +18,7 @@ public class TreeInteractable : Interactable
 
     private IEnumerator ActivatePresent()
     {
-        yield return new WaitForSeconds( 2f );
+        yield return new WaitForSeconds( Mathf.Max( duration - .5f, 0f ) );
 
 		present.Activate();
     }
