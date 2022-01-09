@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18d379e6119e3340ba37c2254fafd31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceBetweenItems: 1.5
 --- !u!143 &3625413636958289778
 CharacterController:
   m_ObjectHideFlags: 0

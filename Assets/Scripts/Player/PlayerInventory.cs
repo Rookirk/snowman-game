@@ -4,28 +4,40 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    private List<ItemData> inventory;
+    private List<Item> inventory;
+
+	public float distanceBetweenItems = 1f;
+
+	private void Awake()
+	{
+		inventory = new List<Item>();
+	}
 
 	public bool Contains( ItemData item )
 	{
-		if( inventory.Contains( item ) )
+		foreach( Item currItem in inventory )
 		{
-			return true;
+			if( currItem.data == item )
+			{
+				return true;
+			}
 		}
 
 		return false;
 	}
 
-	public void Add( ItemData item )
+	public void Add( Item item )
 	{
 		inventory.Add( item );
+		item.FollowPlayer( distanceBetweenItems * ( inventory.IndexOf( item ) + 1 ) );
 	}
 
-	public void Remove( ItemData item )
+	public void Remove( Item item )
 	{
 		if( inventory.Contains( item ) )
 		{
 			inventory.Remove( item );
+			item.Remove();
 		}
 		else
 		{

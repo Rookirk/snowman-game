@@ -77,7 +77,8 @@ public class PlayerController : MonoBehaviour
         }
         else if( collision.tag == "Item")
         {
-
+            Item item = collision.GetComponent<Item>();
+            inventory.Add( item );
         }
     }
 
