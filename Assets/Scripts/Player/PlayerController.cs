@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController character;
     private PlayerAnimator animator;
+    private PlayerInventory inventory;
 
     public float MoveSpeed;
     public int itemsCollected = 3;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         instance = this;
         character = GetComponent<CharacterController>();
         animator = GetComponent<PlayerAnimator>();
+        inventory = GetComponent<PlayerInventory>();
 
         nearbyInteractableList = new List<Interactable>();
     }
@@ -62,7 +64,7 @@ public class PlayerController : MonoBehaviour
     // Want a certain behavior to be triggered when the object is tagged as an item
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.tag == "Item")
+        if(collision.tag == "Present")
         {
             // Collect item
             Present present = collision.GetComponent<Present>();
@@ -72,6 +74,10 @@ public class PlayerController : MonoBehaviour
         {
             Interactable interactable = collision.GetComponent<Interactable>();
             nearbyInteractableList.Add( interactable );
+        }
+        else if( collision.tag == "Item")
+        {
+
         }
     }
 
