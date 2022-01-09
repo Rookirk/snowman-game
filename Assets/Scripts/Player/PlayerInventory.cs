@@ -44,4 +44,18 @@ public class PlayerInventory : MonoBehaviour
 			Debug.LogWarning( "Tried removing an item, but couldn't!" );
 		}
 	}
+
+	public void Remove( ItemData item )
+	{
+		foreach( Item currItem in inventory )
+		{
+			if( currItem.data == item )
+			{
+				inventory.Remove( currItem );
+				currItem.Remove();
+				return;
+			}
+		}
+		Debug.LogWarning( "Tried removing an item, but couldn't!" );
+	}
 }

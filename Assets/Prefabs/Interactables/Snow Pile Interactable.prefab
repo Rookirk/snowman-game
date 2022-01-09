@@ -199,7 +199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1062828837307324357, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
       propertyPath: m_Name
-      value: Snow Pile Interactable Variant
+      value: Snow Pile Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 1062828837307324409, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
       propertyPath: m_RootOrder
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075873807dc1cb840940d7c23a762c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedText: {fileID: 5658269914310631136}
+  selectedCanvas: {fileID: 5658269914310631136}
   movingObject: {fileID: 4946962405953172499}
   destination: {fileID: 4137433374529707961}
   duration: 1

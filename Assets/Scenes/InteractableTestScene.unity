@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 1030268392}
   - component: {fileID: 1030268391}
   m_Layer: 0
-  m_Name: TestItem
+  m_Name: Gate Key
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,10 +744,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1030268390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c3a78fb2f3d3c04f8ca9bdff789390f, type: 3}
+  m_Script: {fileID: 11500000, guid: e537edb8d4fa6ba47aaa422b3124fb60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 4daffe532fc863743a5f088e2a6549e3, type: 2}
+  data: {fileID: 11400000, guid: 714dd6c708f57304f868934d47ff18ab, type: 2}
 --- !u!4 &1030268395
 Transform:
   m_ObjectHideFlags: 0

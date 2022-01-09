@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14165c8b7362da4c97f8c3b90d263fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedText: {fileID: 7808561089845338021}
+  selectedCanvas: {fileID: 7808561089845338021}
   present: {fileID: 6613021772716054489}
 --- !u!1001 &8699544363791309306
 PrefabInstance:

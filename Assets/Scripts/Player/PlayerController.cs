@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController character;
     private PlayerAnimator animator;
-    private PlayerInventory inventory;
+    public PlayerInventory inventory;
 
     public float MoveSpeed;
     public int itemsCollected = 3;

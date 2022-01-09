@@ -5,11 +5,11 @@ using TMPro;
 
 public abstract class Interactable : MonoBehaviour
 {
-	public Canvas selectedText;
+	public Canvas selectedCanvas;
 
 	protected virtual void Start()
 	{
-		selectedText.enabled = false;
+		selectedCanvas.enabled = false;
 	}
 
 	/// <summary>
@@ -17,7 +17,7 @@ public abstract class Interactable : MonoBehaviour
     /// </summary>
 	public virtual void Select()
 	{
-		selectedText.enabled = true;
+		selectedCanvas.enabled = true;
 	}
 
 	/// <summary>
@@ -25,7 +25,7 @@ public abstract class Interactable : MonoBehaviour
     /// </summary>
 	public virtual void Deselect()
 	{
-		selectedText.enabled = false;
+		selectedCanvas.enabled = false;
 	}
 
 	/// <summary>
