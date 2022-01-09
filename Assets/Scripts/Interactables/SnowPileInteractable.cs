@@ -7,8 +7,6 @@ public class SnowPileInteractable : TransformInteractable
 {
 	public Present present;
 
-	private Vector3 destinationPosition;
-
 	public override void OnInteract()
 	{
 		base.OnInteract();
