@@ -9,6 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9e90fc096dd7e814a91203fc5cdb5366
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: e4b7fc0024bab2c409d91665e82768e1
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: 7fdcebc0bd72b1b4b800813a9c4a0a91
+  - enabled: 1
     path: Assets/Scenes/SnowScene.unity
     guid: b9800ebac814e114e8622218113deec2
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: d9aa3d32808766747b45493d1f6a5c27
+  - enabled: 1
+    path: Assets/Scenes/CreditsScreen.unity
+    guid: ed4242a08034c584582a2d62c8cfe726
   m_configObjects: {}
