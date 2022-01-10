@@ -5,6 +5,8 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public ItemData data;
+    public bool activateOnStart = true;
+
 	private Collider detectionCollider;
 
 	private bool inInventory = false;
@@ -20,6 +22,14 @@ public class Item : MonoBehaviour
 		detectionCollider = GetComponent<Collider>();
 	}
 
+	protected virtual void Start()
+	{
+		if( !activateOnStart )
+        {
+            detectionCollider.enabled = false;
+        }
+	}
+
 	private void Update()
 	{
 		if( inInventory )
@@ -33,6 +43,11 @@ public class Item : MonoBehaviour
 				transform.position = newPosition;
 			}
 		}
+	}
+
+	public void Activate()
+	{
+		detectionCollider.enabled = true;
 	}
 
 	public void FollowPlayer( float maxDistanceFromPlayer )
