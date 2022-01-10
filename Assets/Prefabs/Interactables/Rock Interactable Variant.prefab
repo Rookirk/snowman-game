@@ -123,7 +123,7 @@ Transform:
   m_GameObject: {fileID: 5373237257672172768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.19, z: 0}
-  m_LocalScale: {x: 3.1938, y: 3.1938, z: 3.1938}
+  m_LocalScale: {x: 188.3932, y: 188.3932, z: 525.5}
   m_Children: []
   m_Father: {fileID: 5402639364494396208}
   m_RootOrder: 1
@@ -135,7 +135,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5373237257672172768}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 65ec28bceaffb60499f82451ad94bdf7, type: 3}
 --- !u!23 &4373341914971871853
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 090e8c49b44eccc48adac4e1f4a8e81a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,7 +188,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.02, y: 0.3, z: 0.03}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4919596359436573897
 PrefabInstance:
@@ -203,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1062828836921850754, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.29
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1062828837307324357, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
       propertyPath: m_Name
@@ -255,7 +255,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1062828837307324415, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
       propertyPath: m_Radius
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062828837984427757, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
