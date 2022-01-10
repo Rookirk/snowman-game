@@ -8,17 +8,17 @@ public class PressurePlate : MonoBehaviour
 	public Action OnPress;
 	public Action OnRelease;
 
-	private void OnCollisionEnter( Collision collision )
+	private void OnTriggerEnter( Collider other )
 	{
-		if( collision.collider.tag == "Player" )
+		if( other.tag == "Player" )
 		{
 			OnPress?.Invoke();
 		}
 	}
 
-	private void OnCollisionExit( Collision collision )
+	private void OnTriggerExit( Collider other )
 	{
-		if( collision.collider.tag == "Player" )
+		if( other.tag == "Player" )
 		{
 			OnRelease?.Invoke();
 		}

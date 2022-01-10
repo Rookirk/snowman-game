@@ -4,7 +4,13 @@ using UnityEngine;
 using DG.Tweening;
 using System;
 
-public class TimedDoorLock : MonoBehaviour
+public class TimedDoorLock : Interactable
 {
-	public TimedDoorLock door;
+	public TimedDoor door;
+
+	public override void OnInteract()
+	{
+		door.Lock();
+		DisableCollider();
+	}
 }

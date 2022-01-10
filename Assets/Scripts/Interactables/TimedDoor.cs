@@ -11,6 +11,9 @@ public class TimedDoor : MonoBehaviour
 	public Transform movingDoor;
 	public Transform raisedDoor;
 
+	public float timeToRaise = 1f;
+	public float timeToLower = 5f;
+
 	private Tween previousPositionTween;
 	private Vector3 loweredPosition;
 	private Vector3 raisedPosition;
@@ -22,21 +25,23 @@ public class TimedDoor : MonoBehaviour
 
 		loweredPosition = movingDoor.position;
 		raisedPosition = raisedDoor.position;
+
+		raisedDoor.gameObject.SetActive(false);
 	}
 
 	private void Raise()
 	{
 		previousPositionTween?.Kill();
-		previousPositionTween = movingDoor.DOMove( raisedPosition, 1f );
+		previousPositionTween = movingDoor.DOMove( raisedPosition, timeToRaise );
 	}
 
 	private void Lower()
 	{
 		previousPositionTween?.Kill();
-		previousPositionTween = movingDoor.DOMove( loweredPosition, 5f );
+		previousPositionTween = movingDoor.DOMove( loweredPosition, timeToLower );
 	}
 
-	private void Lock()
+	public void Lock()
 	{
 		Raise();
 
