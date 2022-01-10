@@ -42,6 +42,12 @@ public class PlayerInventory : MonoBehaviour
 		else
 		{
 			Debug.LogWarning( "Tried removing an item, but couldn't!" );
+			return;
+		}
+
+		foreach( Item currItem in inventory )
+		{
+			currItem.FollowPlayer( distanceBetweenItems * ( inventory.IndexOf( currItem ) + 1 ) );
 		}
 	}
 
@@ -51,8 +57,7 @@ public class PlayerInventory : MonoBehaviour
 		{
 			if( currItem.data == item )
 			{
-				inventory.Remove( currItem );
-				currItem.Remove();
+				Remove( currItem );
 				return;
 			}
 		}

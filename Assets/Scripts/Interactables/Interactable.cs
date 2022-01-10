@@ -33,6 +33,11 @@ public abstract class Interactable : MonoBehaviour
     /// </summary>
 	public abstract void OnInteract();
 
+	public virtual void EnableCollider()
+	{
+		GetComponent<Collider>().enabled = true;
+	}
+
 	public virtual void DisableCollider()
 	{
 		Deselect();

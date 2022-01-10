@@ -18,7 +18,7 @@ public class GateInteractable : TransformInteractable
 		}
 		else
 		{
-			selectedText.SetText( "You can't unlock this!" );
+			selectedText.SetText( "You need the key to Unlock this Gate!" );
 		}
 		
 	}
