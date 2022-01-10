@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+	[SerializeField]
     private List<Item> inventory;
 
 	public float distanceBetweenItems = 1f;

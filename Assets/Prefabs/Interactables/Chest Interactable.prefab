@@ -594,15 +594,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45ef840f3286694eb4c155a8708bb14, type: 3}
---- !u!114 &1747330595685747206 stripped
+--- !u!114 &3055600185069640749 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1284083395432021409, guid: f45ef840f3286694eb4c155a8708bb14, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2560741475168496522, guid: f45ef840f3286694eb4c155a8708bb14, type: 3}
   m_PrefabInstance: {fileID: 715571926389929895}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e537edb8d4fa6ba47aaa422b3124fb60, type: 3}
+  m_Script: {fileID: 11500000, guid: f907a04ba78bae24f99d0f3ba95cafc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8884400508808667161
@@ -697,6 +697,6 @@ MonoBehaviour:
   movingObject: {fileID: 6820474758138669891}
   destination: {fileID: 3740455292117611720}
   duration: 1
-  item: {fileID: 1747330595685747206}
+  item: {fileID: 3055600185069640749}
   itemMidpoint: {fileID: 4261037362201878426}
   itemDestination: {fileID: 8965632005778297351}

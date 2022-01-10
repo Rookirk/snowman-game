@@ -10,15 +10,15 @@ public class ChestInteractable : TransformInteractable
 	public Transform itemMidpoint;
 	public Transform itemDestination;
 
-	private Vector3 destinationPosition;
+	private Vector3 itemDestinationPosition;
 	private float itemJumpHeight;
-	private Tween destinationPositionTween;
+	private Tween itemPositionTween;
 
 	protected override void Start()
 	{
 		base.Start();
 
-		destinationPosition = itemDestination.position;
+		itemDestinationPosition = itemDestination.position;
 		itemDestination.gameObject.SetActive(false);
 
 		itemJumpHeight = itemMidpoint.position.y - item.transform.position.y;
@@ -38,7 +38,7 @@ public class ChestInteractable : TransformInteractable
 	{
 		yield return new WaitForSeconds( duration/2 );
 
-		item.transform.DOJump( destinationPosition, itemJumpHeight, 1, duration );
+		item.transform.DOJump( itemDestinationPosition, itemJumpHeight, 1, duration );
 
 		StartCoroutine( ActivateItem() );
 	}
