@@ -10,7 +10,7 @@ public class PresentManager : MonoBehaviour
     private int _itemCount = 0;
 
     //Make it public to expose it the Inspector 
-    private int _itemMax = 10;
+    private int _itemMax = 7;
 
     private void Awake()
     {
