@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class BridgeController : Interactable
+public class BridgeController : TransformInteractable
 {
 	public Bridge bridge;
 
@@ -11,6 +11,8 @@ public class BridgeController : Interactable
 
 	public override void OnInteract()
 	{
+		base.OnInteract();
+		
 		if( currentScore == -1 )
 		{
 			currentScore = 1;
