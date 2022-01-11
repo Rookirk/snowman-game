@@ -471,6 +471,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 4daffe532fc863743a5f088e2a6549e3, type: 2}
   activateOnStart: 1
+  model: {fileID: 1375517784}
+  floatMagnitude: 0.5
+  floatSpeed: 1
+  rotationSpeed: 1
+  liftSpeed: 1
 --- !u!4 &532562085
 Transform:
   m_ObjectHideFlags: 0
@@ -748,6 +753,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 4daffe532fc863743a5f088e2a6549e3, type: 2}
   activateOnStart: 1
+  model: {fileID: 719450301}
+  floatMagnitude: 0.5
+  floatSpeed: 1
+  rotationSpeed: 1
+  liftSpeed: 1
 --- !u!4 &829702699
 Transform:
   m_ObjectHideFlags: 0
@@ -922,6 +932,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 714dd6c708f57304f868934d47ff18ab, type: 2}
   activateOnStart: 1
+  model: {fileID: 1859798597}
+  floatMagnitude: 0.5
+  floatSpeed: 1
+  rotationSpeed: 1
+  liftSpeed: 1
 --- !u!4 &1030268395
 Transform:
   m_ObjectHideFlags: 0

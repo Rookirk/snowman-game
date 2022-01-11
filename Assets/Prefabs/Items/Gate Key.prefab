@@ -47,6 +47,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 714dd6c708f57304f868934d47ff18ab, type: 2}
   activateOnStart: 1
+  model: {fileID: 5675741084880313076}
+  floatMagnitude: 0.5
+  floatSpeed: 1
+  rotationSpeed: 45
+  liftSpeed: 1
 --- !u!135 &1284083395432021422
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -119,7 +124,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 21a8cf7efd0276948a6d32f92951c5c8, type: 2}
+  - {fileID: 2100000, guid: 090a9603694e5bf40937056ffe1c517f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
