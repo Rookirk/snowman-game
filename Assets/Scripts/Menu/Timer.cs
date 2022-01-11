@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
 
     float currTime = 0f; // Current Time starts at 0 seconds
-    float startTime = 12f; // Starting Time starts at 12 seconds (for "Intro" scene)
+    float startTime = 12f; // Starting Time starts at 12 seconds
     public string NextLoadingScene; // Next scene to load
 
     // SerializeField: Similar to private, but can view in the Inspector
@@ -17,12 +17,6 @@ public class Timer : MonoBehaviour
     // For initialization: Set current time to starting time 
     void Start () 
     {
-        // This is for "TutorialScene": Set Starting Time to 9 seconds instead
-        if (NextLoadingScene == "SnowScene")
-        {
-            startTime = 9f; 
-        }  
-
         currTime = startTime;
     }
         
