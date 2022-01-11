@@ -8,6 +8,8 @@ public class TreeInteractable : Interactable
 	public Present present;
 	private Animator animator;
 
+	public float duration = 1.2f;
+
 	private void Awake()
 	{
 		animator = GetComponent<Animator>();
@@ -24,7 +26,7 @@ public class TreeInteractable : Interactable
 
     private IEnumerator ActivatePresent()
     {
-        yield return new WaitForSeconds( 2f );
+        yield return new WaitForSeconds( duration );
 
 		present.Activate();
     }
