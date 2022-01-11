@@ -22,6 +22,8 @@ public class Item : MonoBehaviour
 
     private float floatCount = 0.0f;
 
+	private bool shouldAnimate = true;
+
 	protected virtual void Awake()
 	{
 		if( data == null )
@@ -37,6 +39,7 @@ public class Item : MonoBehaviour
 		if( !activateOnStart )
         {
             detectionCollider.enabled = false;
+			shouldAnimate = false;
         }
 	}
 
@@ -54,20 +57,24 @@ public class Item : MonoBehaviour
 			}
 		}
 
-		// Vertical float
-        Vector3 newVerticalPosition = model.localPosition;
+		if( shouldAnimate )
+		{
+			// Vertical float
+			Vector3 newVerticalPosition = model.localPosition;
 
-        floatCount += floatSpeed * Time.deltaTime;
-        newVerticalPosition.y = ( -Mathf.Cos(floatCount) + 1 ) * floatMagnitude;
-        model.localPosition = newVerticalPosition;
+			floatCount += floatSpeed * Time.deltaTime;
+			newVerticalPosition.y = ( -Mathf.Cos(floatCount) + 1 ) * floatMagnitude;
+			model.localPosition = newVerticalPosition;
 
-        // Rotation
-        model.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
+			// Rotation
+			model.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
+		}
 	}
 
 	public void Activate()
 	{
 		detectionCollider.enabled = true;
+		shouldAnimate = true;
 	}
 
 	public void FollowPlayer( float maxDistanceFromPlayer )
