@@ -11,8 +11,8 @@ public class TimedDoor : MonoBehaviour
 	public Transform movingDoor;
 	public Transform raisedDoor;
 
-	public float timeToRaise = 1f;
-	public float timeToLower = 5f;
+	public float timeToRaise;
+	public float timeToLower;
 
 	private Tween previousPositionTween;
 	private Vector3 loweredPosition;
