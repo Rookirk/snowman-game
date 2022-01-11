@@ -3756,7 +3756,7 @@ GameObject:
   - component: {fileID: 1293243913}
   - component: {fileID: 1293243912}
   - component: {fileID: 1293243911}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SnowTerrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
