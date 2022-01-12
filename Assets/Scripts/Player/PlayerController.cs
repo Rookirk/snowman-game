@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     private Interactable closestInteractable;
     private Interactable previousInteractable;
 
+    private AudioSource footsteps;
+    private float footstepVolume;
+
     // Awake is called before the first frame update
     // Awake is used for local initializations (on the same gameObject)
     private void Awake()
@@ -28,8 +31,15 @@ public class PlayerController : MonoBehaviour
         character = GetComponent<CharacterController>();
         animator = GetComponent<PlayerAnimator>();
         inventory = GetComponent<PlayerInventory>();
+        footsteps = GetComponent<AudioSource>();
 
         nearbyInteractableList = new List<Interactable>();
+    }
+
+    private void Start()
+    {
+        footstepVolume = footsteps.volume;
+        footsteps.volume = 0;
     }
 
     private void Update()
@@ -57,6 +67,8 @@ public class PlayerController : MonoBehaviour
         Vector3 MoveDirection = new Vector3(InputDirection.x, 0, InputDirection.y);
         
         moveVector = MoveSpeed * MoveDirection;
+
+        footsteps.volume = MoveDirection.magnitude * footstepVolume;
     }
 
     // This function is used when the Player collider hits another collider.
