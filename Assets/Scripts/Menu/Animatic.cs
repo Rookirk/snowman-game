@@ -27,11 +27,14 @@ public class Animatic : MonoBehaviour
         if( currImageIndex >= images.Count )
         {
             SceneManager.LoadScene(NextLoadingScene);
+            return;
         }
         else if( currImageIndex == images.Count - 1 )
         {
             continueText.enabled = false;
         }
+
+        Debug.Log(currImageIndex);
 
         display.sprite = images[ currImageIndex ];
         display.rectTransform.sizeDelta = images[ currImageIndex ].bounds.size * 100;
