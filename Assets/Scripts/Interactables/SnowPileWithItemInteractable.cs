@@ -11,6 +11,13 @@ public class SnowPileWithItemInteractable : TransformInteractable
 	private Vector3 itemDestinationPosition;
 	private Quaternion itemDestinationRotation;
 
+	private AudioSource audioSource;
+
+	private void Awake()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
 	protected override void Start()
 	{
 		base.Start();
@@ -22,6 +29,8 @@ public class SnowPileWithItemInteractable : TransformInteractable
 
 	public override void OnInteract()
 	{
+		audioSource.Play();
+
 		base.OnInteract();
 
 		DisableCollider();

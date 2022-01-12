@@ -15,6 +15,13 @@ public class PondInteractable : Interactable
 
 	public float duration = 1f;
 
+	private AudioSource audioSource;
+
+	private void Awake()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
 	protected override void Start()
 	{
 		base.Start();
@@ -28,6 +35,7 @@ public class PondInteractable : Interactable
 
 	public override void OnInteract()
 	{
+		audioSource.Play();
 		DisableCollider();
 		present.transform.DOJump( destinationPosition, presentJumpHeight, 1, duration );
 		StartCoroutine( ActivatePresent() );
