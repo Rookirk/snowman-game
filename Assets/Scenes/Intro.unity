@@ -760,9 +760,11 @@ MonoBehaviour:
   NextLoadingScene: SnowScene
   display: {fileID: 347364347}
   images:
-  - {fileID: 21300000, guid: f3f2221577cfca548bd3a6f95d95f09e, type: 3}
-  - {fileID: 21300000, guid: 99988a580df54414bb7a07d252a12a55, type: 3}
-  - {fileID: 21300000, guid: 0906c1b867afd8f43af080991df85724, type: 3}
+  - {fileID: 21300000, guid: 9622076d918a4564ab53b2412be26c19, type: 3}
+  - {fileID: 21300000, guid: 771adcd3f9a5a604f99e4f81c4852cbd, type: 3}
+  - {fileID: 21300000, guid: 2fe1aaaff2222d8438798cfbe4267668, type: 3}
+  - {fileID: 21300000, guid: f6fc8f8cf27f769449a40ac20b1f9ddd, type: 3}
+  continueText: {fileID: 1887895930}
 --- !u!114 &2020552595
 MonoBehaviour:
   m_ObjectHideFlags: 0
