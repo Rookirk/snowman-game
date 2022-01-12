@@ -14,6 +14,13 @@ public class ChestInteractable : TransformInteractable
 	private float itemJumpHeight;
 	private Tween itemPositionTween;
 
+	private AudioSource audioSource;
+
+	private void Awake()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
 	protected override void Start()
 	{
 		base.Start();
@@ -28,6 +35,8 @@ public class ChestInteractable : TransformInteractable
 	public override void OnInteract()
 	{
 		base.OnInteract();
+
+		audioSource.Play();
 
 		DisableCollider();
 

@@ -8,9 +8,22 @@ public class Item : MonoBehaviour
     public bool activateOnStart = true;
 
 	private Collider detectionCollider;
+	private AudioSource audioSource;
 
 	private bool inInventory = false;
 	private float maxDistanceFromPlayer;
+
+	public Transform model;
+
+    // Vars for translation and rotation
+    public float floatMagnitude = 0.5f;
+    public float floatSpeed = 1f;
+    public float rotationSpeed = 25f;
+    public float liftSpeed = 1f;
+
+    private float floatCount = 0.0f;
+
+	private bool shouldAnimate = true;
 
 	protected virtual void Awake()
 	{
@@ -20,6 +33,7 @@ public class Item : MonoBehaviour
 		}
 
 		detectionCollider = GetComponent<Collider>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	protected virtual void Start()
@@ -27,6 +41,7 @@ public class Item : MonoBehaviour
 		if( !activateOnStart )
         {
             detectionCollider.enabled = false;
+			shouldAnimate = false;
         }
 	}
 
@@ -38,16 +53,30 @@ public class Item : MonoBehaviour
 			float distanceToPlayer = Vector3.Distance( transform.position, playerPosition );
 			if( distanceToPlayer > maxDistanceFromPlayer )
 			{
-				Vector3 newPosition = Vector3.MoveTowards( transform.position, playerPosition, PlayerController.instance.MoveSpeed * Time.deltaTime );
+				Vector3 newHorizontalPosition = Vector3.MoveTowards( transform.position, playerPosition, PlayerController.instance.MoveSpeed * Time.deltaTime );
 
-				transform.position = newPosition;
+				transform.position = newHorizontalPosition;
 			}
+		}
+
+		if( shouldAnimate )
+		{
+			// Vertical float
+			Vector3 newVerticalPosition = model.localPosition;
+
+			floatCount += floatSpeed * Time.deltaTime;
+			newVerticalPosition.y = ( -Mathf.Cos(floatCount) + 1 ) * floatMagnitude;
+			model.localPosition = newVerticalPosition;
+
+			// Rotation
+			model.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
 		}
 	}
 
 	public void Activate()
 	{
 		detectionCollider.enabled = true;
+		shouldAnimate = true;
 	}
 
 	public void FollowPlayer( float maxDistanceFromPlayer )
@@ -55,6 +84,8 @@ public class Item : MonoBehaviour
 		detectionCollider.enabled = false;
 		inInventory = true;
 		this.maxDistanceFromPlayer = maxDistanceFromPlayer;
+
+		audioSource.Play();
 	}
 
 	public void Remove()

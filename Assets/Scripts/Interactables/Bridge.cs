@@ -17,6 +17,14 @@ public class Bridge : MonoBehaviour
 	private int currentPosition = 0;
 	private Tween previousRotationTween;
 
+	private Coroutine previousCoroutine;
+	private AudioSource audioSource;
+
+	private void Awake()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
 	private void Start()
 	{
 		raisedRotation = bridge.rotation;
@@ -30,6 +38,10 @@ public class Bridge : MonoBehaviour
 	public void SetHeight()
 	{
 		previousRotationTween?.Kill();
+		if( previousCoroutine != null )
+		{
+			StopCoroutine( previousCoroutine );
+		}
 
 		switch( currentPosition )
 		{
@@ -42,6 +54,7 @@ public class Bridge : MonoBehaviour
 				break;
 
 			case 2:
+				previousCoroutine = StartCoroutine( PlaySound() );
 				previousRotationTween = bridge.DORotateQuaternion( loweredRotation, duration );
 				break;
 			
@@ -56,5 +69,12 @@ public class Bridge : MonoBehaviour
 		currentPosition += amount;
 
 		SetHeight();
+	}
+
+	private IEnumerator PlaySound()
+	{
+		yield return new WaitForSeconds( duration );
+
+		audioSource.Play();
 	}
 }

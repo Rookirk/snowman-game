@@ -23,6 +23,13 @@ public class WellInteractable : Interactable
 	private int score = 0;
 	public float duration = 1f;
 
+	private AudioSource audioSource;
+
+	private void Awake()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
 	protected override void Start()
 	{
 		base.Start();
@@ -42,6 +49,8 @@ public class WellInteractable : Interactable
 
 	public override void OnInteract()
 	{
+		audioSource.Play();
+
 		score++;
 		DisableCollider();
 
@@ -55,14 +64,14 @@ public class WellInteractable : Interactable
 			
 			case 2:
 				DOTween.To( () => ropeBlendValue, x => ropeBlendValue = x, 66f, duration );
-				crank.DORotate( new Vector3(1440, 0 , 0), duration, RotateMode.FastBeyond360 );
+				crank.DORotate( new Vector3(1080, 0 , 0), duration, RotateMode.FastBeyond360 );
 				StartCoroutine( ReEnableCollider() );
 				break;
 
 			case 3:
 				DOTween.To( () => ropeBlendValue, x => ropeBlendValue = x, 100f, duration );
 				DOTween.To( () => bucketBlendValue, x => bucketBlendValue = x, 100f, duration );
-				crank.DORotate( new Vector3(2160, 0 , 0), duration, RotateMode.FastBeyond360 );
+				crank.DORotate( new Vector3(1080, 0 , 0), duration, RotateMode.FastBeyond360 );
 				StartCoroutine( ActivatePresent() );
 				break;
 		}

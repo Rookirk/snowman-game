@@ -9,6 +9,13 @@ public class RockInteractable : TransformInteractable
 
 	public TextMeshProUGUI selectedText;
 
+	private AudioSource audioSource;
+
+	private void Awake()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
 	public override void Select()
 	{
 		base.Select();
@@ -28,6 +35,8 @@ public class RockInteractable : TransformInteractable
 	{
 		if( PlayerController.instance.inventory.Contains( pickaxe ) )
 		{
+			audioSource.Play();
+			
 			base.OnInteract();
 
 			DisableCollider();
