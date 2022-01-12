@@ -1653,7 +1653,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congrats, you did it!
+  m_text: Time to Party!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53dee326c365a2149966ed7486557dcb, type: 2}
   m_sharedMaterial: {fileID: -2674298285639384805, guid: 53dee326c365a2149966ed7486557dcb, type: 2}
