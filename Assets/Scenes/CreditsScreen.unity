@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1058,8 +1058,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 159, y: 214}
-  m_SizeDelta: {x: 316.9129, y: 56.023}
+  m_AnchoredPosition: {x: 181, y: 214}
+  m_SizeDelta: {x: 367.206, y: 56.023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638199494
 MonoBehaviour:
@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Asset Packs:'
+  m_text: '3rd Party Resources:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf5a1a9e7d7ec194ebaeca318056082e, type: 2}
   m_sharedMaterial: {fileID: -8152878448772894466, guid: cf5a1a9e7d7ec194ebaeca318056082e, type: 2}
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -148.24207, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
