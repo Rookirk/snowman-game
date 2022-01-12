@@ -16,9 +16,17 @@ public class ChestInteractable : TransformInteractable
 
 	private AudioSource audioSource;
 
+	// Audio
+	private AudioSource chestOpen;
+	private AudioSource snowmanSound;
+
 	private void Awake()
 	{
-		audioSource = GetComponent<AudioSource>();
+		List<AudioSource> chestSounds = new List<AudioSource>();
+		GetComponents<AudioSource>(chestSounds);
+
+		chestOpen = chestSounds[0];
+		snowmanSound = chestSounds[1];
 	}
 
 	protected override void Start()
@@ -36,7 +44,8 @@ public class ChestInteractable : TransformInteractable
 	{
 		base.OnInteract();
 
-		audioSource.Play();
+		chestOpen.Play();
+		snowmanSound.Play();
 
 		DisableCollider();
 

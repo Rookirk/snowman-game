@@ -11,18 +11,22 @@ public class TreeInteractable : Interactable
 	private AudioSource treeAudioSource;
 	public AudioSource presentAudioSource;
 
+	private ParticleSystem snowEffect;
+
 	public float duration = 1.2f;
 
 	private void Awake()
 	{
 		animator = GetComponent<Animator>();
 		treeAudioSource = GetComponent<AudioSource>();
+		snowEffect = GetComponent<ParticleSystem>();
 	}
 
 	public override void OnInteract()
 	{
 		animator.SetTrigger("Shake");
 		treeAudioSource.Play();
+		snowEffect.Play();
 
 		DisableCollider();
 
@@ -35,5 +39,6 @@ public class TreeInteractable : Interactable
 
 		present.Activate();
 		presentAudioSource.Play();
+		snowEffect.Stop();
     }
 }
