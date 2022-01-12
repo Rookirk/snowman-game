@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
     public bool activateOnStart = true;
 
 	private Collider detectionCollider;
+	private AudioSource audioSource;
 
 	private bool inInventory = false;
 	private float maxDistanceFromPlayer;
@@ -32,6 +33,7 @@ public class Item : MonoBehaviour
 		}
 
 		detectionCollider = GetComponent<Collider>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	protected virtual void Start()
@@ -82,6 +84,8 @@ public class Item : MonoBehaviour
 		detectionCollider.enabled = false;
 		inInventory = true;
 		this.maxDistanceFromPlayer = maxDistanceFromPlayer;
+
+		audioSource.Play();
 	}
 
 	public void Remove()
