@@ -370,23 +370,6 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 1062828836921850753, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
   m_PrefabInstance: {fileID: 164094244891612024}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1342622979126914944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934804695217456317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6660f5f03cd3b94a85fcb87e85b0c39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedCanvas: {fileID: 934804694024841465}
-  present: {fileID: 72535592547865664}
-  presentMidPoint: {fileID: 8564845440353690132}
-  presentDestination: {fileID: 3175605802623892629}
-  duration: 1
 --- !u!82 &8220820810746587410
 AudioSource:
   m_ObjectHideFlags: 0
@@ -397,9 +380,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 658ab88c1c70bf247857e5ceff0686cc, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c655630bb34bdda4986525dc9e078301, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.384
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -483,6 +466,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1342622979126914944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934804695217456317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6660f5f03cd3b94a85fcb87e85b0c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedCanvas: {fileID: 934804694024841465}
+  present: {fileID: 72535592547865664}
+  presentMidPoint: {fileID: 8564845440353690132}
+  presentDestination: {fileID: 3175605802623892629}
+  duration: 1
 --- !u!1001 &7223045109255936353
 PrefabInstance:
   m_ObjectHideFlags: 0
