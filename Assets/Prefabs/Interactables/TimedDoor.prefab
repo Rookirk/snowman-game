@@ -248,8 +248,8 @@ MonoBehaviour:
   plate: {fileID: 6344174091343207988}
   movingDoor: {fileID: 856139612469703854}
   raisedDoor: {fileID: 3279618517311435274}
-  timeToRaise: 1
-  timeToLower: 9
+  timeToRaise: 1.5
+  timeToLower: 25
 --- !u!1 &3352411968509163521
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3352411968509163521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.131, z: 10.508099}
+  m_LocalPosition: {x: 0, y: -0.11, z: 10.508099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8775691568169586607}
@@ -400,7 +400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7208664403996041092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.96, z: 10.508099}
+  m_LocalPosition: {x: 0, y: 3.233, z: 10.508099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4313177941381852527}
@@ -617,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8292879356674189550, guid: 8653d023a54868543bcb1121f200621c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8550202017091430632, guid: 8653d023a54868543bcb1121f200621c, type: 3}
       propertyPath: m_Name
@@ -805,7 +805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7700912347227335896, guid: d7f4907240f0c324093dda8667ad67bf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.181
+      value: 10.466
       objectReference: {fileID: 0}
     - target: {fileID: 7700912347227335896, guid: d7f4907240f0c324093dda8667ad67bf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1935,7 +1935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8292879356674189550, guid: 8653d023a54868543bcb1121f200621c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8550202017091430632, guid: 8653d023a54868543bcb1121f200621c, type: 3}
       propertyPath: m_Name

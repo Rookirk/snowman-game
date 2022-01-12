@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: e4b7fc0024bab2c409d91665e82768e1
   - enabled: 1
-    path: Assets/Scenes/TutorialScene.unity
-    guid: 7fdcebc0bd72b1b4b800813a9c4a0a91
-  - enabled: 1
     path: Assets/Scenes/SnowScene.unity
     guid: b9800ebac814e114e8622218113deec2
   - enabled: 1
