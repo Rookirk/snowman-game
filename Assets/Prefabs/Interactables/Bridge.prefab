@@ -376,7 +376,7 @@ AudioSource:
   m_GameObject: {fileID: 4501623960698131386}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 658ab88c1c70bf247857e5ceff0686cc, type: 2}
   m_audioClip: {fileID: 8300000, guid: c364fb6bb3e232646bc778f2ebcf357f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.568
@@ -613,6 +613,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1072448630531053644, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
+      propertyPath: m_text
+      value: Press Space to Pull the Lever!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
 --- !u!223 &797277539181499200 stripped
@@ -639,7 +643,7 @@ AudioSource:
   m_GameObject: {fileID: 797277540404543236}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 658ab88c1c70bf247857e5ceff0686cc, type: 2}
   m_audioClip: {fileID: 8300000, guid: fb7c8c65e274ef141aad0edb7681b71e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -888,11 +892,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1062828836921850754, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.42
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 1062828836921850754, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.69
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 1062828837307324357, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
       propertyPath: m_Name
@@ -942,6 +946,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1072448630531053644, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
+      propertyPath: m_text
+      value: Press Space to Pull the Lever!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb415cbeaad5a8f418ded925a7ef6875, type: 3}
 --- !u!223 &6665870265821906132 stripped
@@ -968,7 +976,7 @@ AudioSource:
   m_GameObject: {fileID: 6665870267821942928}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 658ab88c1c70bf247857e5ceff0686cc, type: 2}
   m_audioClip: {fileID: 8300000, guid: fb7c8c65e274ef141aad0edb7681b71e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

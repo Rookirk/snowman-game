@@ -81,11 +81,13 @@ public class Item : MonoBehaviour
 
 	public void FollowPlayer( float maxDistanceFromPlayer )
 	{
+		if( !inInventory )
+		{
+			audioSource.Play();
+		}
 		detectionCollider.enabled = false;
 		inInventory = true;
 		this.maxDistanceFromPlayer = maxDistanceFromPlayer;
-
-		audioSource.Play();
 	}
 
 	public void Remove()
