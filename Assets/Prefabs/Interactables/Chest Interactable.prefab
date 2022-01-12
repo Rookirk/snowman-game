@@ -592,6 +592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickaxe
       objectReference: {fileID: 0}
+    - target: {fileID: 2560741475168496522, guid: f45ef840f3286694eb4c155a8708bb14, type: 3}
+      propertyPath: activateOnStart
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45ef840f3286694eb4c155a8708bb14, type: 3}
 --- !u!114 &3055600185069640749 stripped
