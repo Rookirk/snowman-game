@@ -71,7 +71,7 @@ public class Present : MonoBehaviour
         detectionCollider.enabled = false;
 
         // Play Sound
-        source.Play();
+        AudioManager.Instance?.PlayPresentCollect();
 
         // Add item to present manager
         PresentManager.instance.AddPresent();

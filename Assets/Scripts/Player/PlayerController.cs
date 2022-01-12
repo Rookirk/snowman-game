@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     {
         footstepVolume = footsteps.volume;
         footsteps.volume = 0;
+
+        AudioManager.Instance?.PlayGameplayMusic();
     }
 
     private void Update()
