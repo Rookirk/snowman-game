@@ -10,7 +10,6 @@ public class AudioManager : MonoBehaviour
 	public AudioSource sfx;
 
 	public AudioClip mainMenuMusic;
-	public AudioClip introMusic;
 	public AudioClip gameplayMusic;
 	public AudioClip endingMusic;
 
@@ -34,27 +33,32 @@ public class AudioManager : MonoBehaviour
 
 	public void PlayMainMenuMusic()
 	{
-		music.clip = mainMenuMusic;
-		music.Play();
-	}
-
-	public void PlayIntroMusic()
-	{
-		music.clip = introMusic;
-		music.Play();
+		if( music.clip != mainMenuMusic )
+		{
+			music.clip = mainMenuMusic;
+			music.volume = 0.389f;
+			music.Play();
+		}
 	}
 
 	public void PlayGameplayMusic()
 	{
-		music.clip = gameplayMusic;
-		music.volume = 0.25f;
-		music.Play();
+		if( music.clip != gameplayMusic )
+		{
+			music.clip = gameplayMusic;
+			music.volume = 0.25f;
+			music.Play();
+		}
 	}
 
 	public void PlayEndingMusic()
 	{
-		music.clip = endingMusic;
-		music.Play();
+		if( music.clip != endingMusic )
+		{
+			music.clip = endingMusic;
+			music.volume = 0.5f;
+			music.Play();
+		}
 	}
 
 	public void PlayMenuClick()

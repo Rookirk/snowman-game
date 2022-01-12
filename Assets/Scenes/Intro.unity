@@ -1018,6 +1018,7 @@ GameObject:
   - component: {fileID: 2020552591}
   - component: {fileID: 2020552590}
   - component: {fileID: 2020552594}
+  - component: {fileID: 2020552595}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1121,6 +1122,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextLoadingScene: SnowScene
   countdownText: {fileID: 624117893}
+--- !u!114 &2020552595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020552589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a2d7d4c238ed543bf9e8270ba33333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2053125842
 GameObject:
   m_ObjectHideFlags: 0

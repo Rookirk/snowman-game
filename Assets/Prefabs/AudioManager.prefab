@@ -302,8 +302,7 @@ MonoBehaviour:
   music: {fileID: 1736383595706841353}
   sfx: {fileID: 1736383594932942231}
   mainMenuMusic: {fileID: 8300000, guid: fd6212f8285351d4abff7ab01f632d9d, type: 3}
-  introMusic: {fileID: 0}
   gameplayMusic: {fileID: 8300000, guid: dca3893d9f7c7c240aacadb28d3caec5, type: 3}
-  endingMusic: {fileID: 0}
+  endingMusic: {fileID: 8300000, guid: 085fd9aa530126649b8f459a3ea69bd7, type: 3}
   menuClick: {fileID: 8300000, guid: 89db98714b1aadf459a31735f01cf1c4, type: 3}
   presentCollect: {fileID: 8300000, guid: dbaef2ca138a08f4c8f0713e3636611f, type: 3}
